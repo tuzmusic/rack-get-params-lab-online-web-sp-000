@@ -18,6 +18,11 @@ class Application
       @@cart.each { |item|  resp.write "#{item}\n" }
     elsif req.path.match(/add/)
       item = req.params['item']
+      if items.include?(item)
+        @@cart << item
+      else
+        resp.write "The item is already in your cart."
+      end
     else
       resp.write "Path Not Found"
     end
