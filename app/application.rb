@@ -29,6 +29,7 @@ class Application
       # binding.pry
       if @@items.include?(item)
         @@cart << item
+        resp.write "Added #{item}"
       else
         resp.write "The item is already in your cart."
       end
