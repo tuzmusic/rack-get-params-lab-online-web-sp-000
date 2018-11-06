@@ -31,7 +31,8 @@ class Application
         @@cart << item
         resp.write "Added #{item}"
       else
-        resp.write "The item is already in your cart."
+        resp.write "We don
+        ."
       end
     else
       resp.write "Path Not Found"
